@@ -71,8 +71,9 @@ def montar_cena(ax, c):
     ax.set_ylim(-0.4, 3.1)
     ax.set_yticks([])
     ax.set_xlabel("Posição (m) — escala visual ilustrativa")
-    ax.set_title("Colisão frontal perfeitamente inelástica")
+    ax.set_title("Colisão Frontal Perfeitamente Inelástica", loc="center", x=0.75, fontsize=24)
     ax.axhline(0, color="gray", lw=1.5)
+
 
     r1 = Rectangle((0, 0), c["w1"], c["h1"], fc=COR1, ec="black", lw=1.2)
     r2 = Rectangle((0, 0), c["w2"], c["h2"], fc=COR2, ec="black", lw=1.2)

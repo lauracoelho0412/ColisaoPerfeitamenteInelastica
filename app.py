@@ -45,7 +45,7 @@ def texto_painel(c):
 
 def construir_interface():
     """Monta a figura, os controles (R2) e liga tudo à animação."""
-    fig = plt.figure(figsize=(13, 8.6))
+    fig = plt.figure(figsize=(13, 8.6), facecolor="#f7f9fc")
     try:
         fig.canvas.manager.set_window_title("ADO-3 — Colisão perfeitamente inelástica")
     except Exception:
@@ -80,9 +80,9 @@ def construir_interface():
         desenhar_barras(ax_p, ax_k, estado["cen"])
         ax_txt.clear()
         ax_txt.axis("off")
-        ax_txt.text(0.0, 1.0, texto_painel(estado["cen"]), va="top", ha="left",
+        ax_txt.text(0.5, 0.65, texto_painel(estado["cen"]), va="center", ha="center",
                     family="monospace", fontsize=9.5, transform=ax_txt.transAxes,
-                    bbox=dict(fc="#f6f6f6", ec="#bbbbbb", boxstyle="round,pad=0.5"))
+                    bbox=dict(fc="#f6f6f6", ec="#bbbbbb", boxstyle="round,pad=1"))
         fig.canvas.draw_idle()
 
     def alternar_pausa(_=None):
